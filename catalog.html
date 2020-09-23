@@ -12,20 +12,38 @@
 	<body>
 	  	<header>
 	  		<div>
-		  		<a href="index.html"><img src="img/icon-logo.svg" width="163" height="35" alt="Logo"></a>
-		  		<a href="#"><img src="img/icon-search.svg" width="12" height="12" alt="Search"></a>
-		  		<form>
-		   			<input type="search" placeholder="Поиск по сайту">
-		  		</form>
+		  		<a href="index.html">
+		  			<img src="img/icon-logo.svg" width="163" height="35" alt="Logo">
+		  		</a>
+
+		  		<!-- НЕ СОВСЕМ ПОНЯТНО, ИКОНКА ПОИСКА "img/icon-search.svg" ДОЛЖНА БЫТЬ В <lable> ИЛИ ТЕГОМ <lable> ПРОСТО ОБЕРНУТЬ <input> -->
+
+		  		<a href="#">
+		  			<img src="img/icon-search.svg" width="12" height="12" alt="Search">
+		  		</a>
+		  			<form action="catalog.html?search" method="post">
+			  			<label for="search">Поиск по сайту</label>
+			   			<input type="search" id="search-field" placeholder="Поиск по сайту">
+			   		</form>
 		  	</div>
   			<ul>
-  				<li><img src="img/icon-user.svg" width="14" height="14" alt="User"><span>Валентин Курочкин</span><a href="#">Выйти</a></li>
-  				<li><img src="img/icon-chart.svg" width="14" height="14" alt="Chart"><a href="#">Сравнить</a></li>
-  				<li><img src="img/icon-cart.svg" width="14" height="14" alt="Cart"><a href="#">Корзина</a></li>
+  				<li>
+  					<img src="img/icon-user.svg" width="14" height="14" alt="User">
+  					<span>Валентин Курочкин</span>
+  					<a href="#">Выйти</a>
+  				</li>
+  				<li>
+  					<img src="img/icon-chart.svg" width="14" height="14" alt="Chart">
+  					<a href="#">Сравнить</a>
+  				</li>
+  				<li>
+  					<img src="img/icon-cart.svg" width="14" height="14" alt="Cart">
+  					<a href="#">Корзина</a>
+  				</li>
   			</ul>
 	  		<nav>
 	  			<ul>
-	  				<li><a href="catalog.html">Каталог товаров <img src="img/icon-plus.svg" width="22" height="22" alt="More"></a></li>
+	  				<li><a href="catalog.html"><span>Каталог товаров</a></span><img src="img/icon-plus.svg" width="22" height="22" alt="More"></a></li>
 	  				<li><a href="delivery.html">Доставка</a></li>
 	  				<li><a href="guaranty.html">Гарантия</a></li>
 	  				<li><a href="contacts.html">Контакты</a></li>
@@ -68,8 +86,8 @@
 						<li>По типу</li>
 						<li>По популярности</li>
 					</ul>
-					<img src="img/button-sort-up.svg">
-					<img src="img/button-sort-down.svg">
+					<img src="img/button-sort-up.svg" width="10" height="10" alt="Иконка для сортировки 1">
+					<img src="img/button-sort-down.svg" width="10" height="10" alt="Иконка для сортировки 2">
 				</div>
 			</section>
 
@@ -78,25 +96,34 @@
 					<h2> Список моноподов для селфи</h2>
 					<ul>
 						<li>
-							<a href="product.html"><img src="img/item-1.png" width="360" height="380" alt="Fan selfie stick"></a>
+							<a href="product.html">
+								<img src="img/item-1.png" width="360" height="380" alt="Fan selfie stick">
+							</a>
 							<span>Любительская селфи-палка</span>
-							500 руб.
+							<span>500 руб.</span>
 						</li>
 						<li>
-							<a href="product.html"><img src="img/item-2.png" width="360" height="380" alt="Professional selfie stick"></a>
+							<a href="product.html">
+								<img src="img/item-2.png" width="360" height="380" alt="Professional selfie stick">
+							</a>
 							<span>Профессиональная селфи-палка</span>
-							1500 руб.
+							<span>1500 руб.</span>
 						</li>
 						<li>
-							<a href="product.html"><img src="img/item-3.png" width="360" height="380" alt="Unsinkable selfie stick"></a>
+							<a href="product.html">
+								<img src="img/item-3.png" width="360" height="380" alt="Unsinkable selfie stick">
+							</a>
 							<span>Непотопляемая селфи-палка</span>
-							2500 руб.
+							<span>2500 руб.</span>
 						</li>
 						<li>
-							<img src="img/ellipse-18.png" alt=""><span>New</span>
-							<a href="product.html"><img src="img/item-4.png" width="360" height="380" alt="selfie stick - follow me."></a>
+							<img src="img/ellipse-18.png" alt="">
+							<span>New</span>
+							<a href="product.html">
+								<img src="img/item-4.png" width="360" height="380" alt="selfie stick - follow me.">
+							</a>
 							<span>Селфи-палка "следуй за мной"</span>
-							4900 руб.
+							<span>4900 руб.</span>
 						</li>
 					</ul>
 					<ul>
@@ -111,17 +138,28 @@
 		</main>
 
 		<footer>
-			<h1>Контакная информация</h1>
 			<div>
 				<a href="index.html"><img src="img/icon-logo-footer.svg" width="163" height="35" alt="Logo"></a>
 				<ul>
-					<li><img src="img/icon-user-footer.svg" width="14" height="14" alt="User"><span>Валентин Курочкин</span><a href="#">Выйти</a></li>
-					<li><img src="img/icon-compare-footer.svg" width="14" height="14" alt="Chart"><a href="#">Сравнить</a></li>
-					<li><img src="img/icon-basket-footer.svg" width="14" height="14" alt="Cart"><a href="#">Корзина</a></li>
+					<li>
+						<img src="img/icon-user-footer.svg" width="14" height="14" alt="User">
+						<span>Валентин Курочкин</span>
+						<a href="#">Выйти</a>
+					</li>
+					<li>
+						<img src="img/icon-compare-footer.svg" width="14" height="14" alt="Chart">
+						<a href="#">Сравнить</a>
+					</li>
+					<li>
+						<img src="img/icon-basket-footer.svg" width="14" height="14" alt="Cart">
+						<a href="#">Корзина</a>
+					</li>
 				</ul>
 			</div>
 			<div>
-				<address><a href="#">г. Москва, ул. Строителей, 15</a></address>
+				<address>
+					<a href="#">г. Москва, ул. Строителей, 15</a>
+				</address>
 				<ul>
 	  				<li><a href="delivery.html">Доставка</a></li>
 	  				<li><a href="guaranty.html">Гарантия</a></li>

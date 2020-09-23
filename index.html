@@ -5,42 +5,62 @@
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
 	    <meta name="keywords" content="Селфи-палка, Экшн-камеры, Умные часы">
 	    <meta name="description" content="Интернет магазин умных девайсов">
+	    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
 	    <link rel="stylesheet" href="css/main.css">
 	    <title>HTML Academy: Девайс</title>
 	</head>
 
 	<body>
 	  	<header>
-	  		<h1>Навигация и панель управления/h1>
+	  		<a href="index.html">
+		  		<img src="img/icon-logo.svg" width="163" height="35" alt="Logo">
+		  	</a>
 	  		<section>
-		  		<a href="index.html"><img src="img/icon-logo.svg" width="163" height="35" alt="Logo"></a>
-		  		<a href="#"><img src="img/icon-search.svg" width="12" height="12" alt="Search"></a>
-		  		<input type="search" placeholder="Поиск по сайту">
+		  		<!-- НЕ СОВСЕМ ПОНЯТНО, ИКОНКА ПОИСКА "img/icon-search.svg" ДОЛЖНА БЫТЬ В <lable> ИЛИ ТЕГОМ <lable> ПРОСТО ОБЕРНУТЬ <input> -->
+		  		<form action="catalog.html?search" method="post">
+		  			<a href="#"><img src="img/icon-search.svg" width="12" height="12" alt="Search"></a>
+			  		<label for="search">Поиск по сайту</label>
+			  		<input type="search" id="search-field" placeholder="Поиск по сайту">
+			  		<button type="submit">Найти</button>
+			  	</form>
+			  	<div>
+					<a href="catalog.html"><span>Каталог товаров</span><img src="img/icon-plus.svg" width="22" height="22" alt="More"></a>
+			  		<ul>
+		  				<li><a href="catalog.html?virtual-reality=all">Виртуальная реальность</a></li>
+		  				<li><a href="catalog.html?selfie-monopods=all">Моноподы для селфи</a></li>
+		  				<li><a href="catalog.html?action-cameras=all"></a>Экшн-камеры</li>
+		  				<li><a href="catalog.html?fitness-bracelets=all"></a>Фитнес браслеты</li>
+		  				<li><a href="catalog.html?smart-watch=all"></a>Умные часы</li>
+		  				<li><a href="catalog.html?quadcopters=all"></a>Квадрокоптеры</li>
+	  				</ul>
+  				</div>
 	  		</section>
-  			<ul>
-  				<li><img src="img/icon-user.svg" width="14" height="14" alt="Login"><a href="#">Войти</a></li>
-  				<li><img src="img/icon-chart.svg" width="14" height="14" alt="Chart"><a href="#">Сравнить</a></li>
-  				<li><img src="img/icon-cart.svg" width="14" height="14" alt="Cart"><a href="#">Корзина</a></li>
-  			</ul>
-	  		<nav>
+
+			<section>
 	  			<ul>
-	  				<li><a href="catalog.html">Каталог товаров <img src="img/icon-plus.svg" width="22" height="22" alt="More"></a></li>
-	  				<li><a href="delivery.html">Доставка</a></li>
-	  				<li><a href="guaranty.html">Гарантия</a></li>
-	  				<li><a href="contacts.html">Контакты</a></li>
+	  				<li>
+	  					<img src="img/icon-user.svg" width="14" height="14" alt="Login">
+	  					<a href="#">Войти</a>
+	  				</li>
+	  				<li>
+	  					<img src="img/icon-chart.svg" width="14" height="14" alt="Chart">
+	  					<a href="#">Сравнить</a>
+	  				</li>
+	  				<li>
+	  					<img src="img/icon-cart.svg" width="14" height="14" alt="Cart">
+	  					<a href="#">Корзина</a>
+	  				</li>
 	  			</ul>
-	  		</nav>
-	  		<section>
-	  			<h2>Каталог товаров - меню</h2> <!--  ЭТОТ КАТАЛОГ БУДЕТ СКРЫТ-->
-	  			<ul>
-	  				<li><a href="catalog.html?virtual-reality=all">Виртуальная реальность</a></li>
-	  				<li><a href="catalog.html?selfie-monopods=all">Моноподы для селфи</a></li>
-	  				<li><a href="catalog.html?action-cameras=all"></a>Экшн-камеры</li>
-	  				<li><a href="catalog.html?fitness-bracelets=all"></a>Фитнес браслеты</li>
-	  				<li><a href="catalog.html?smart-watch=all"></a>Умные часы</li>
-	  				<li><a href="catalog.html?quadcopters=all"></a>Квадрокоптеры</li>
-	  			</ul>
-	  		</section>
+		  		<nav>
+		  			<ul>
+		  				<li><a href="delivery.html">Доставка</a></li>
+		  				<li><a href="guaranty.html">Гарантия</a></li>
+		  				<li><a href="contacts.html">Контакты</a></li>
+		  			</ul>
+		  		</nav>
+			</section>
+
+
 	  	</header>
 
 		<main>
@@ -50,74 +70,76 @@
 
 			<section>
 				<h2>Специальные предложения - слайдер</h2>
-				<figure>
-					<img src="img/slider-1.png" alt="Selfie stick">
-				</figure>
+				<div><img src="img/slider-1.png" alt="Selfie stick"></div>
 				<div></div> <!-- Rectangle 2 - в этом элементе будет выполнена заливка width: 100px; height: 7px; background: #FFFFFF;-->
-				<span>01</span>
-				<h2>Делай селфи, как Бен Стиллер!</h2>
-				<p>Самая длинная палка для селфи доступна в нашем магазине.<br>Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг!</p>
-				<a href="#">Подробнее</a> <!-- Из макета не понятно куда ведет эта ссылка и ведет ли вообще куда-то, поэтому сделал ее не активной-->
-				<ul>
-					<li>
-						<a href="#">
-							<img src="img/ellipse-1.svg" width="12" height="12" alt="Ellipse">
-							<img src="img/ellipse-2.svg" width="6" height="6" alt="Ellipse">
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<img src="img/slider-button-empty.svg" width="12" height="12" alt="Empty button">
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<img src="img/slider-button-empty.svg" width="12" height="12" alt="Empty button">
-						</a>
-					</li>
-				</ul>
-				<dl>
-		  			<dt>Длина палки</dt>
-		  			<dd>8.5 м</dd>
+				<div>
+					<span>01</span>
+					<h2>Делай селфи, как Бен Стиллер!</h2>
+					<p>Самая длинная палка для селфи доступна в нашем магазине.<br>Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг!</p>
+					<div>
+						<a href="#">Подробнее</a> <!-- Из макета не понятно куда ведет эта ссылка и ведет ли вообще куда-то, поэтому сделал ее не активной-->
+						<ul>
+							<li>
+								<a href="#">
+									<img src="img/ellipse-1.svg" width="12" height="12" alt="Ellipse">
+									<img src="img/ellipse-2.svg" width="6" height="6" alt="Ellipse">
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img src="img/slider-button-empty.svg" width="12" height="12" alt="Empty button">
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img src="img/slider-button-empty.svg" width="12" height="12" alt="Empty button">
+								</a>
+							</li>
+						</ul>
+					</div>
+					<dl>
+			  			<dt>Длина палки</dt>
+			  			<dd>8.5 м</dd>
 
-		  			<dt>Вес палки</dt>
-		  			<dd>5 кг</dd>
+			  			<dt>Вес палки</dt>
+			  			<dd>5 кг</dd>
 
-		  			<dt>Материал</dt>
-		  			<dd>Карбон</dd>
-				</dl>
+			  			<dt>Материал</dt>
+			  			<dd>Карбон</dd>
+					</dl>
+				</div>
 			</section>
 
 			<!-- СЛАЙДЕРЫ | ВТОРОЙ СЛАЙД -->
 
 			<section>
 				<h2>Специальные предложения - слайдер</h2>
-				<figure>
-					<img src="img/slider-2.png" alt="Fitness bracelet">
-				</figure>
+				<div><img src="img/slider-2.png" alt="Fitness bracelet"></div>
 				<div></div> <!-- Rectangle 2 - в этом элементе будет выполнена заливка width: 100px; height: 7px; background: #FFFFFF;-->
 				<span>02</span>
 				<h2>Худеем правильно!</h2>
 				<p>Мотивирующие фитнес-браслеты помогут найти в себе силы<br> не пропускать занятия и соблюдать диету.</p>
-				<a href="#">Подробнее</a> <!-- Из макета не понятно куда ведет эта ссылка и ведет ли вообще куда-то, поэтому сделал ее не активной-->
-				<ul>
-					<li>
-						<a href="#">
-							<img src="img/slider-button-empty.svg" width="12" height="12" alt="Empty button">
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<img src="img/ellipse-1.svg" width="12" height="12" alt="Empty button">
-							<img src="img/ellipse-2.svg" width="6" height="6" alt="Ellipse">
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<img src="img/slider-button-empty.svg" width="12" height="12" alt="Empty button">
-						</a>
-					</li>
-				</ul>
+				<div>
+					<a href="#">Подробнее</a> <!-- Из макета не понятно куда ведет эта ссылка и ведет ли вообще куда-то, поэтому сделал ее не активной-->
+					<ul>
+						<li>
+							<a href="#">
+								<img src="img/slider-button-empty.svg" width="12" height="12" alt="Empty button">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="img/ellipse-1.svg" width="12" height="12" alt="Empty button">
+								<img src="img/ellipse-2.svg" width="6" height="6" alt="Ellipse">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="img/slider-button-empty.svg" width="12" height="12" alt="Empty button">
+							</a>
+						</li>
+					</ul>
+				</div>
 				<dl>
 		  			<dt>Без подзарядки</dt>
 		  			<dd>48 часов</dd>
@@ -129,32 +151,32 @@
 
 			<section>
 				<h2>Специальные предложения - слайдер</h2>
-				<figure>
-					<img src="img/slider-3.png" alt="Selfie stick">
-				</figure>
+				<div><img src="img/slider-3.png" alt="Selfie stick"></div>
 				<div></div> <!-- Rectangle 2 - в этом элементе будет выполнена заливка width: 100px; height: 7px; background: #FFFFFF;-->
 				<span>03</span>
 				<h2>Порхает как бабочка, жалит как пчела!</h2>
 				<p>Этот обычный, на первый взгляд, квадрокоптер оснащен<br> мощным лазером, замаскированным под стандартную камеру.</p>
-				<a href="#">Подробнее</a> <!-- Из макета не понятно куда ведет эта ссылка и ведет ли вообще куда-то, поэтому сделал ее не активной-->
-				<ul>
-					<li>
-						<a href="#">
-							<img src="img/slider-button-empty.svg" width="12" height="12" alt="Empty button">
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<img src="img/slider-button-empty.svg" width="12" height="12" alt="Empty button">
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<img src="img/ellipse-1.svg" width="12" height="12" alt="Ellipse">
-							<img src="img/ellipse-2.svg" width="6" height="6" alt="Ellipse">
-						</a>
-					</li>
-				</ul>
+				<div>
+					<a href="#">Подробнее</a> <!-- Из макета не понятно куда ведет эта ссылка и ведет ли вообще куда-то, поэтому сделал ее не активной-->
+					<ul>
+						<li>
+							<a href="#">
+								<img src="img/slider-button-empty.svg" width="12" height="12" alt="Empty button">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="img/slider-button-empty.svg" width="12" height="12" alt="Empty button">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="img/ellipse-1.svg" width="12" height="12" alt="Ellipse">
+								<img src="img/ellipse-2.svg" width="6" height="6" alt="Ellipse">
+							</a>
+						</li>
+					</ul>
+				</div>
 				<dl>
 		  			<dt>Дальность полета</dt>
 		  			<dd>800 м</dd>
@@ -263,7 +285,6 @@
 		</main>
 
 		<footer>
-			<h1>Контакная информация</h1>
 			<div>
 				<a href="index.html"><img src="img/icon-logo-footer.svg" width="163" height="35" alt="Logo"></a>
 				<ul>
@@ -299,22 +320,22 @@
 				<legend style="display: none;">Написать нам</legend>
 				<ul role="form"> <!-- Атрибут role позволяет наиболее четко указать семантическое предназначение блока/элемента страницы  -->
     				<li>
-      					<label for="name">Ваше имя:</label>
-      					<input type="text" placeholder="Имя Фамилия">
+      					<label for="name-field">Ваше имя:</label>
+      					<input type="text" id="name-field" placeholder="Имя Фамилия">
     				</li>
     				<li>
-      					<label for="email">Ваш e-mail</label>
-      					<input type="email" placeholder="email@example.com">
+      					<label for="email-field">Ваш e-mail</label>
+      					<input type="email" id="email-field" placeholder="email@example.com">
     				</li>
 
     				<li>
-    					<label for="text">Текст письма</label>
-    					<textarea type="text" placeholder="В свободной форме"></textarea>
+    					<label for="text-field">Текст письма</label>
+    					<textarea type="text" id="text-field" placeholder="В свободной форме"></textarea>
     				</li>
   				</ul>
 			</fieldset>
-			<a href="#">Отправить</a> 
-			<img src="img/close-icon.png" width="19" height="19" alt="Иконка для закрытия формы">
+			<a href="#">Отправить</a>
+			<img src="img/close-icon.svg" width="19" height="19" alt="Иконка для закрытия формы">
 			<img src="img/close-ellipse-icon.png" width="19" height="19" alt="Иконка-элипс для закрытия формы">
 		</section>
 
@@ -323,10 +344,9 @@
 		<section>
 			<ul>
 				<li><img src="img/map-big.png" alt="Большая карта - как нас найти"></li>
-				<li><img src="img/close-icon.png" width="19" height="19" alt="Иконка для закрытия формы"></li>
+				<li><img src="img/close-icon.svg" width="19" height="19" alt="Иконка для закрытия формы"></li>
 				<li><img src="img/close-ellipse-icon.png" width="19" height="19" alt="Иконка-элипс для закрытия формы"></li>
 			</ul>
 		</section>
-
 	</body>
 </html>

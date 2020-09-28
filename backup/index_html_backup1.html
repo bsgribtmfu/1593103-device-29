@@ -9,57 +9,59 @@
 	    <link rel="stylesheet" href="css/main.css">
 	    <link rel="stylesheet" href="fonts/opensans.woff">
 	    <link rel="stylesheet" href="fonts/opensans.woff2">
-	    <link rel="stylesheet" href="fonts/gilroyextrabold.woff">
-	    <link rel="stylesheet" href="fonts/gilroyextrabold.woff2">
 	    <title>HTML Academy: Девайс</title>
 	</head>
 
 	<body class="page-body">
 	  	<header class="main-header">
-	  		<a class="header-logo" href="index.html"><img src="img/icon-logo.svg" width="163" height="35" alt="Логотип магазина"></a>
-	  		<form action="#" method="post">
-	  			<img src="img/icon-search.svg" width="12" height="12" alt="Поиск"> <!-- используем псевдоэлемент ::before -->
-		  		<label class="hidden" for="search">Поиск по сайту</label>
-		  		<input class="search" type="search" id="search-field" tabindex="0" placeholder="Поиск по сайту">
-		  		<button class="search-button" type="submit">Найти</button> <!-- js | addEventListener | focus-->
-		  	</form>
-		  	<ul class="user-navigation">
-  				<li>
-  					<img src="img/icon-user.svg" width="14" height="14" alt="Login">
-  					<a class="login-link" href="#">Войти</a>
-  				</li>
-  				<li>
-  					<img src="img/icon-chart.svg" width="14" height="14" alt="Chart">
-  					<a href="#">Сравнить</a>
-  				</li>
-  				<li>
-  					<img src="img/icon-cart.svg" width="14" height="14" alt="Cart">
-  					<a href="#">Корзина</a>
-  				</li>
-  			</ul>
-			<nav class="main-navigation">
-				<ul class="catalog-navigation">
-					<li>
-						<a class="catalog-link" href="#">Каталог товаров</a>
-						<img src="img/icon-plus.svg" width="22" height="22" alt="Развернуть список меню"> <!-- используем псевдоэлемент ::after -->
-						<ul class="catalog-submenu hidden">
-							<li><a href="#">Виртульная реальность</a></li>
-							<li><a href="#">Фитнес-браслеты</a></li>
-							<li><a href="#">Квадрокоптеры</a></li>
-							<li><a href="#">Моноподы для селфи</a></li>
-							<li><a href="#">Умные часы</a></li>
-							<li><a href="#">Экшн-камеры</a></li>
-						</ul>
-					</li>
-					<li>
-						<ul class="site-navigation">
-			  				<li><a class="button" href="delivery.html">Доставка</a></li>
-			  				<li><a class="button" href="guaranty.html">Гарантия</a></li>
-			  				<li><a class="button" href="contacts.html">Контакты</a></li>
-		  				</ul>
-					</li>
-				</ul>
-			</nav>
+	  		<a class="header-logo" href="index.html"><img src="img/icon-logo.svg" width="163" height="35" alt="Logo"></a>
+	  		<section>
+		  		<form action="#" method="post">
+		  			<img src="img/icon-search.svg" width="12" height="12" alt="Search">
+			  		<label class="search-label" for="search">Поиск по сайту</label>
+			  		<input class="search" type="search" id="search-field" tabindex="0" placeholder="Поиск по сайту">
+			  		<button style="display: none;" class="search-button" type="submit">Найти</button> <!-- js | addEventListener | focus-->
+			  	</form>
+			  	<div class="header-catalog">
+					<a class="header-catalog-link" href="catalog.html"><span>Каталог товаров</span><img src="img/icon-plus.svg" width="22" height="22" alt="More"></a>
+			  		<ul class="header-catalog-list">
+		  				<li><a href="catalog.html?virtual-reality=all">Виртуальная реальность</a></li>
+		  				<li><a href="catalog.html?selfie-monopods=all">Моноподы для селфи</a></li>
+		  				<li><a href="catalog.html?action-cameras=all">Экшн-камеры</a></li>
+		  				<li><a href="catalog.html?fitness-bracelets=all">Фитнес браслеты</a></li>
+		  				<li><a href="catalog.html?smart-watch=all">Умные часы</a></li>
+		  				<li><a href="catalog.html?quadcopters=all">Квадрокоптеры</a></li>
+	  				</ul>
+  				</div>
+	  		</section>
+
+
+			<section>
+	  			<ul class="header-panel-list">
+	  				<li class="header-panel-item">
+	  					<img src="img/icon-user.svg" width="14" height="14" alt="Login">
+	  					<a class="login-link" href="#">Войти</a>
+	  				</li>
+	  				<li class="header-panel-item">
+	  					<img src="img/icon-chart.svg" width="14" height="14" alt="Chart">
+	  					<a href="#">Сравнить</a>
+	  				</li>
+	  				<li class="header-panel">
+	  					<img src="img/icon-cart.svg" width="14" height="14" alt="Cart">
+	  					<a href="#">Корзина</a>
+	  				</li>
+	  			</ul>
+
+
+		  		<nav class="main-navigation">
+					
+		  			<ul class="main-navigation-list">
+		  				<li><a class="button" href="delivery.html">Доставка</a></li>
+		  				<li><a class="button" href="guaranty.html">Гарантия</a></li>
+		  				<li><a class="button" href="contacts.html">Контакты</a></li>
+		  			</ul>
+		  		</nav>
+			</section>
 	  	</header>
 
 		<main class="container">
@@ -145,6 +147,7 @@
 				</dl>
 			</section>
 
+
 			<!-- СЛАЙДЕРЫ | ТРЕТИЙ СЛАЙД -->
 
 			<section>
@@ -184,58 +187,73 @@
 				</dl>
 			</section>
 
+
+
+
+
+
+
+
 			<section class="catalog">
 				<h2>Каталог товаров</h2>
 				<ul class="catalog-list">
-					<li>
-						<a href="#">
-							<div><img class="virtual-reality" src="img/virtual-reality.svg" alt="Виртуальная реальность"></div>
+					<li class="catalog-item">
+						<a href="catalog.html?virtual-reality=all">
+							<img class="virtual-reality" src="img/virtual-reality.svg" alt="Виртуальная реальность">
 							<span>Виртуальная реальность</span>
 						</a>
 					</li>
-					<li>
-						<a href="#">
-							<div><img class="selfie-monopods" src="img/selfie-monopods.svg" alt="Моноподы для селфи"></div>
+					<li class="catalog-item">
+						<a href="catalog.html?selfie-monopods=all">
+							<img class="selfie-monopods" src="img/selfie-monopods.svg" alt="Моноподы для селфи">
 							<span>Моноподы для селфи</span>
 						</a>
 					</li>
-					<li>
-						<a href="#">
-							<div><img class="action-cameras" src="img/action-сameras.svg" alt="Экшн-камеры"></div>
+					<li class="catalog-item">
+						<a href="catalog.html?action-cameras=all">
+							<img class="action-cameras" src="img/action-сameras.svg" alt="Экшн-камеры">
 							<span>Экшн-камеры</span>
 						</a>
 					</li>
-					<li>
-						<a href="#">
-							<div><img class="fitness-bracelets" src="img/fitness-bracelets.svg" alt="Фитнес-браслеты"></div>
+					<li class="catalog-item">
+						<a href="catalog.html?fitness-bracelets=all">
+							<img class="fitness-bracelets" src="img/fitness-bracelets.svg" alt="Фитнес-браслеты">
 							<span>Фитнес-браслеты</span>
 						</a>
 					</li>
-					<li>
-						<a href="#">
-							<div><img class="smart-watch" src="img/smart-watch.svg" alt="Умные часы"></div>
+					<li class="catalog-item">
+						<a href="catalog.html?smart-watch=all">
+							<img class="smart-watch" src="img/smart-watch.svg" alt="Умные часы">
 							<span>Умные часы</span>
 						</a>
 					</li>
-					<li>
-						<a href="#">
-							<div><img class="quadcopters" src="img/quadcopters.svg" alt="Квадрокоптеры"></div>
+					<li class="catalog-item">
+						<a href="catalog.html?quadcopters=all">
+							<img class="quadcopters" src="img/quadcopters.svg" alt="Квадрокоптеры">
 							<span>Квадрокоптеры</span>
 						</a>
 					</li>
 				</ul>
 			</section>
 
-			<section class="services">
+
+
+
+
+
+
+
+
+			<section class="service">
 				<h2>Сервисы</h2>
-				<ul class="services-list">
-					<li><a class="button" href="#">Доставка</a></li>
-					<li><a class="button" href="#">Гарантия</a></li>
-					<li><a class="button" href="#">Кредит</a></li>
+				<ul class="service-list">
+					<li class="service-item"><a class="button" href="#">Доставка</a></li>
+					<li class="service-item"><a class="button" href="#">Гарантия</a></li>
+					<li class="service-item"><a class="button" href="#">Кредит</a></li>
 				</ul>
 				<div>
 					<h3>Доставка</h3>
-					<p>Мы с удовольствием доставим ваш товар прямо к вашему<br> подъезду совершенно бесплатно! Ведь мы неплохо<br> заработаем, поднимая его на ваш этаж.</p>
+					<p class="">Мы с удовольствием доставим ваш товар прямо к вашему<br> подъезду совершенно бесплатно! Ведь мы неплохо<br> заработаем, поднимая его на ваш этаж.</p>
 					<img src="img/delivery-logo.svg" alt="Логотип доставки">
 				</div>
 				<div>
@@ -253,48 +271,68 @@
 			<section class="brands">
 				<h2>Производители</h2>
 				<ul class="brands-list">
-					<li><img class="images-brands" src="img/logo-1.png" alt="DJI"></li>
-					<li><img class="images-brands" src="img/logo-2.png" alt="SP-ADGETS"></li>
-					<li><img class="images-brands" src="img/logo-3.png" alt="GoPro"></li>
-					<li><img class="images-brands" src="img/logo-4.png" alt="VIVE"></li>	
+					<li class="brands-item"><img class="image-brands" src="img/logo-1.png" width="260" height="100" alt="DJI"></li>
+					<li class="brands-item"><img src="img/logo-2.png" alt="SP-ADGETS"></li>
+					<li class="brands-item"><img src="img/logo-3.png" width="260" height="100" alt="GoPro"></li>
+					<li class="brands-item"><img src="img/logo-4.png" width="260" height="100" alt="VIVE"></li>	
 				</ul>
 			</section>
 
 			<section class="about">
 				<h2>О нас</h2>
-				<div class="rectangle"></div> <!-- Rectangle 13 - в этом элементе будет выполнена заливка width: 80px; height: 7px; background: #000000;-->
+				<div></div> <!-- Rectangle 13 - в этом элементе будет выполнена заливка width: 80px; height: 7px; background: #000000;-->
 				<p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
 				<p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
 				<ul class="about-list">
-					<li">Деловые линии</li>
-					<li">Автотрейдинг</li>
-					<li">ЖелДорЭкспедиция</li>
+					<li class="about-item">Деловые линии</li>
+					<li class="about-item">Автотрейдинг</li>
+					<li class="about-item">ЖелДорЭкспедиция</li>
 				</ul>
 				<a class="button" href="#">Подобрее о нас</a>
 			</section>
 		
 			<section class="contacts">
 				<h2>Контакты</h2>
-				<div class="rectangle"></div> <!-- Rectangle 14 - в этом элементе будет выполнена заливка width: 80px; height: 7px; background: #000000;-->
+				<div></div> <!-- Rectangle 14 - в этом элементе будет выполнена заливка width: 80px; height: 7px; background: #000000;-->
 				<p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
 				<a href="#"><img src="img/map.png" width="560" height="222" alt="Map"></a>
 				<a class="button" href="#">Напишите нам</a>
 			</section>
 		</main>
 
-		<footer class="main-footer">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<footer class="page-footer footer">
 			<div class="footer-control">
 				<a class="footer-logo" href="index.html"><img src="img/icon-logo-footer.svg" width="163" height="35" alt="Logo"></a>
-				<ul class="footer-user-navigation">
+				<ul class="footer-control-list">
 					<li><img src="img/icon-user-footer.svg" width="14" height="14" alt="User"><a href="#">Войти</a></li>
 					<li><img src="img/icon-compare-footer.svg" width="14" height="14" alt="Chart"><a href="#">Сравнить</a></li>
 					<li><img src="img/icon-basket-footer.svg" width="14" height="14" alt="Cart"><a href="#">Корзина</a></li>
 				</ul>
 			</div>
 			<div class="footer-contacts">
-				<div class="rectangle-footer"></div> <!-- Rectangle 15 - в этом элементе будет выполнена заливка width: 80px; height: 7px; background: #FFC600;-->
+				<div></div> <!-- Rectangle 15 - в этом элементе будет выполнена заливка width: 80px; height: 7px; background: #FFC600;-->
 				<address><a class="footer-address" href="#">г. Москва, ул. Строителей, 15</a></address>
-				<ul class="footer-site-navigation">
+				<ul class="footer-navigation-list">
 	  				<li class="footer-navigation-item"><a href="delivery.html">Доставка</a></li>
 	  				<li class="footer-navigation-item"><a href="guaranty.html">Гарантия</a></li>
 	  				<li class="footer-navigation-item"><a href="contacts.html">Контакты</a></li>
@@ -312,6 +350,33 @@
 	  			</a>
   			</div>
 		</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 		<!-- ВСПЛЫВАЮЩИЕ ОКНА | НАПИСАТЬ НАМ -->
 

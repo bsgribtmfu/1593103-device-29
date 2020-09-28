@@ -5,32 +5,28 @@
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
 	    <meta name="keywords" content="Селфи-палка, Экшн-камеры, Умные часы">
 	    <meta name="description" content="Интернет магазин умных девайсов">
+	    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
 	    <link rel="stylesheet" href="css/main.css">
+	    <link rel="stylesheet" href="fonts/opensans.woff">
+	    <link rel="stylesheet" href="fonts/opensans.woff2">
+	    <link rel="stylesheet" href="fonts/gilroyextrabold.woff">
+	    <link rel="stylesheet" href="fonts/gilroyextrabold.woff2">
 	    <title>HTML Academy: Девайс</title>
 	</head>
 
 	<body>
-	  	<header>
-	  		<div>
-		  		<a href="index.html">
-		  			<img src="img/icon-logo.svg" width="163" height="35" alt="Logo">
-		  		</a>
-
-		  		<!-- НЕ СОВСЕМ ПОНЯТНО, ИКОНКА ПОИСКА "img/icon-search.svg" ДОЛЖНА БЫТЬ В <lable> ИЛИ ТЕГОМ <lable> ПРОСТО ОБЕРНУТЬ <input> -->
-
-		  		<a href="#">
-		  			<img src="img/icon-search.svg" width="12" height="12" alt="Search">
-		  		</a>
-		  			<form action="catalog.html?search" method="post">
-			  			<label for="search">Поиск по сайту</label>
-			   			<input type="search" id="search-field" placeholder="Поиск по сайту">
-			   		</form>
-		  	</div>
-  			<ul>
+	  	<header class="main-header">
+	  		<a class="header-logo" href="index.html"><img src="img/icon-logo.svg" width="163" height="35" alt="Логотип магазина"></a>
+	  		<form action="#" method="post">
+	  			<img src="img/icon-search.svg" width="12" height="12" alt="Поиск"> <!-- используем псевдоэлемент ::before -->
+		  		<label class="hidden" for="search">Поиск по сайту</label>
+		  		<input class="search" type="search" id="search-field" tabindex="0" placeholder="Поиск по сайту">
+		  		<button class="search-button" type="submit">Найти</button> <!-- js | addEventListener | focus-->
+		  	</form>
+		  	<ul class="user-navigation">
   				<li>
-  					<img src="img/icon-user.svg" width="14" height="14" alt="User">
-  					<span>Валентин Курочкин</span>
-  					<a href="#">Выйти</a>
+  					<img src="img/icon-user.svg" width="14" height="14" alt="Login">
+  					<a class="login-link" href="#">Валентин Курочкин</a>
   				</li>
   				<li>
   					<img src="img/icon-chart.svg" width="14" height="14" alt="Chart">
@@ -41,140 +37,151 @@
   					<a href="#">Корзина</a>
   				</li>
   			</ul>
-	  		<nav>
-	  			<ul>
-	  				<li><a href="catalog.html"><span>Каталог товаров</a></span><img src="img/icon-plus.svg" width="22" height="22" alt="More"></a></li>
-	  				<li><a href="delivery.html">Доставка</a></li>
-	  				<li><a href="guaranty.html">Гарантия</a></li>
-	  				<li><a href="contacts.html">Контакты</a></li>
-	  			</ul>
-	  		</nav>
-	  		<section>
-	  			<h2>Каталог товаров - меню</h2> <!--  ЭТОТ КАТАЛОГ БУДЕТ СКРЫТ-->
-	  			<ul>
-	  				<li><a href="catalog.html?virtual-reality=all">Виртуальная реальность</a></li>
-	  				<li><a href="catalog.html?selfie-monopods=all">Моноподы для селфи</a></li>
-	  				<li><a href="catalog.html?action-cameras=all"></a>Экшн-камеры</li>
-	  				<li><a href="catalog.html?fitness-bracelets=all"></a>Фитнес браслеты</li>
-	  				<li><a href="catalog.html?smart-watch=all"></a>Умные часы</li>
-	  				<li><a href="catalog.html?quadcopters=all"></a>Квадрокоптеры</li>
-	  			</ul>
-	  		</section>
+			<nav class="main-navigation">
+				<ul class="catalog-navigation">
+					<li>
+						<a class="catalog-link" href="#">Каталог товаров</a>
+						<img src="img/icon-plus.svg" width="22" height="22" alt="Развернуть список меню"> <!-- используем псевдоэлемент ::after -->
+						<ul class="catalog-submenu hidden">
+							<li><a href="#">Виртульная реальность</a></li>
+							<li><a href="#">Фитнес-браслеты</a></li>
+							<li><a href="#">Квадрокоптеры</a></li>
+							<li><a href="#">Моноподы для селфи</a></li>
+							<li><a href="#">Умные часы</a></li>
+							<li><a href="#">Экшн-камеры</a></li>
+						</ul>
+					</li>
+					<li>
+						<ul class="site-navigation">
+			  				<li><a class="button" href="delivery.html">Доставка</a></li>
+			  				<li><a class="button" href="guaranty.html">Гарантия</a></li>
+			  				<li><a class="button" href="contacts.html">Контакты</a></li>
+		  				</ul>
+					</li>
+				</ul>
+			</nav>
 	  	</header>
 
-		<main>
-			<h1>Моноподы для селфи</h1>
-			<ul>
-				<li><a href="index.html">Главная</a></li>
-				<li><a href="catalog.html">Каталог товаров</a></li>
-				<li>Моноподы для селфи</li>
-			</ul>
+		<main class="page-catalog">
+			<section class="crumbs">
+				<h2>Моноподы для селфи</h2>
+				<ul class="crumbs-list">
+					<li><a href="index.html">Главная</a></li>
+					<li><a href="catalog.html">Каталог товаров</a></li>
+					<li><a>Моноподы для селфи</a></li>
+				</ul>
+			</section>
 
-			<section>
+			<section class="search-filter">
 				<!-- форма фильтра, лектор сказал что бы пока-что не делали :/ -->
 			</section>
 
-			<section>
-				<h2>Панель управления</h2>
-				<div>
-					<span>Фильтр</span>
-				</div>
-				<div>
+			<section class="catalog-header">
+				<h2 class="hidden">Панель управления</h2>
+				<div class="filter-header"><h3>Фильтр</h3></div>
+				<div class="catalog-sort">
 					<h3>Сортировка:</h3>
-					<ul>
-						<li>По цене</li>
-						<li>По типу</li>
-						<li>По популярности</li>
+					<ul class="catalog-sort-list">
+						<li class="current"><a href="#">По цене</a></li>
+						<li><a href="#">По типу</a></li>
+						<li><a href="#">По популярности</a></li>
 					</ul>
-					<img src="img/button-sort-up.svg" width="10" height="10" alt="Иконка для сортировки 1">
-					<img src="img/button-sort-down.svg" width="10" height="10" alt="Иконка для сортировки 2">
+					<ul class="catalog-sort-button">
+						<li class="current">
+							<a href="#">
+								<img src="img/button-sort-up.svg" width="10" height="10" alt="Иконка для сортировки 1">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="img/button-sort-down.svg" width="10" height="10" alt="Иконка для сортировки 2">
+							</a>
+						</li>
+					</ul>
 				</div>
 			</section>
 
-			<div>
-				<section>
-					<h2> Список моноподов для селфи</h2>
-					<ul>
-						<li>
-							<a href="product.html">
-								<img src="img/item-1.png" width="360" height="380" alt="Fan selfie stick">
-							</a>
-							<span>Любительская селфи-палка</span>
-							<span>500 руб.</span>
-						</li>
-						<li>
-							<a href="product.html">
-								<img src="img/item-2.png" width="360" height="380" alt="Professional selfie stick">
-							</a>
-							<span>Профессиональная селфи-палка</span>
-							<span>1500 руб.</span>
-						</li>
-						<li>
-							<a href="product.html">
-								<img src="img/item-3.png" width="360" height="380" alt="Unsinkable selfie stick">
-							</a>
-							<span>Непотопляемая селфи-палка</span>
-							<span>2500 руб.</span>
-						</li>
-						<li>
-							<img src="img/ellipse-18.png" alt="">
-							<span>New</span>
-							<a href="product.html">
-								<img src="img/item-4.png" width="360" height="380" alt="selfie stick - follow me.">
-							</a>
-							<span>Селфи-палка "следуй за мной"</span>
-							<span>4900 руб.</span>
-						</li>
-					</ul>
-					<ul>
-						<li><a href="#">Назад</a></li>
-						<li><a title="Текущая страница">1</a></li>
-						<li><a href="#">2</a></li>
-						<li><a href="#">3</a></li>
-						<li><a href="#">Вперед</a></li>
-					</ul>
-				</section>
-			</div>
-		</main>
+			<section class="catalog-products">
+				<h2 class="hidden"> Список моноподов для селфи</h2>
 
-		<footer>
-			<div>
-				<a href="index.html"><img src="img/icon-logo-footer.svg" width="163" height="35" alt="Logo"></a>
-				<ul>
-					<li>
-						<img src="img/icon-user-footer.svg" width="14" height="14" alt="User">
-						<span>Валентин Курочкин</span>
-						<a href="#">Выйти</a>
+				<ul class="products-list">
+					<li class="product-item">
+						<div class="product-image">
+							<img src="img/item-1.png" width="360" height="380" alt="Fan selfie stick">
+						</div>
+						<div class="product-info">
+							<a href="#">Любительская селфи-палка</a>
+							<span>500 руб.</span>
+						</div>
 					</li>
-					<li>
-						<img src="img/icon-compare-footer.svg" width="14" height="14" alt="Chart">
-						<a href="#">Сравнить</a>
+					<li class="product-item">
+						<div class="product-image">
+							<img src="img/item-2.png" width="360" height="380" alt="Professional selfie stick">
+						</div>
+						<div class="product-info">
+							<a href="#">Профессиональная селфи-палка</a>
+							<span>1500 руб.</span>
+						</div>
 					</li>
-					<li>
-						<img src="img/icon-basket-footer.svg" width="14" height="14" alt="Cart">
-						<a href="#">Корзина</a>
+					<li class="product-item">
+						<div class="product-image">
+							<img src="img/item-3.png" width="360" height="380" alt="Unsinkable selfie stick">
+						</div>
+						<div class="product-info">
+							<a href="#">Непотопляемая селфи-палка</a>
+							<span>2500 руб.</span>
+						</div>
+					</li>
+					<li class="product-item">
+						<div class="product-image">
+							<img src="img/item-4.png" width="360" height="380" alt="selfie stick - follow me.">
+						</div>
+						<div class="product-info">
+							<a href="#">Селфи-палка "следуй за мной"</a>
+							<span>4900 руб.</span>
+						</div>
 					</li>
 				</ul>
+
+				<div class="pagination">
+					<div class="pagination-back"><a href="#">Назад</a></div>
+					<ul class="pagination-list">
+						<li class="current"><a title="Текущая страница">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+					</ul>
+					<div class="pagination-forward"><a href="#">Вперед</a></div>
+				</div>
+			</section>
+		</main>
+		<footer class="main-footer">
+			<div class="footer-control">
+				<a class="footer-logo" href="index.html"><img src="img/icon-logo-footer.svg" width="163" height="35" alt="Logo"></a>
+				<ul class="footer-user-navigation">
+					<li><a href="#">Валентин Курочкин</a></li>
+					<li><a href="#">Сравнить</a></li>
+					<li><a href="#">Корзина</a></li>
+				</ul>
 			</div>
-			<div>
-				<address>
-					<a href="#">г. Москва, ул. Строителей, 15</a>
-				</address>
-				<ul>
-	  				<li><a href="delivery.html">Доставка</a></li>
-	  				<li><a href="guaranty.html">Гарантия</a></li>
-	  				<li><a href="contacts.html">Контакты</a></li>
+			<div class="footer-contacts">
+				<div class="rectangle-footer"></div> <!-- Rectangle 15 - в этом элементе будет выполнена заливка width: 80px; height: 7px; background: #FFC600;-->
+				<address><a class="footer-address" href="#">г. Москва, ул. Строителей, 15</a></address>
+				<ul class="footer-site-navigation">
+	  				<li class="footer-navigation-item"><a href="delivery.html">Доставка</a></li>
+	  				<li class="footer-navigation-item"><a href="guaranty.html">Гарантия</a></li>
+	  				<li class="footer-navigation-item"><a href="contacts.html">Контакты</a></li>
 	  			</ul>
-	  			<a href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
+	  			<a class="footer-phone" href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
   			</div>
-  			<div>
-	  			<div></div> <!-- Rectangle 15 - в этом элементе будет выполнена заливка width: 80px; height: 7px; background: #FFC600;-->
-	  			<ul>
-	  				<li><a href="https://facebook.com/"><img src="img/icon-facebook.svg" alt="Facebook"></a></li>
-	  				<li><a href="htpps://instagram.com/"><img src="img/icon-instagram.svg" alt="Instagram"></a></li>
-	  				<li><a href="https://twitter.com/"><img src="img/icon-twitter.svg" alt="Twitter"></a></li>
+  			<div class="footer-social">
+	  			<ul class="footer-social-list">
+	  				<li><a class="social-button" href="https://facebook.com/"><img class="footer-social-img" src="img/icon-facebook.svg" alt="Facebook"></a></li>
+	  				<li><a class="social-button" href="htpps://instagram.com/"><img src="img/icon-instagram.svg" alt="Instagram"></a></li>
+	  				<li><a class="social-button" href="https://twitter.com/"><img src="img/icon-twitter.svg" alt="Twitter"></a></li>
 	  			</ul>
-	  			<a href="https://htmlacademy.ru/"><img src="img/icon-html-academy.svg" width="27" height="34" alt="Html Academy"></a>
+	  			<a class="academy-button" href="https://htmlacademy.ru/">
+	  				<img src="img/icon-html-academy.svg" width="27" height="34" alt="Html Academy">
+	  			</a>
   			</div>
 		</footer>
 	</body>

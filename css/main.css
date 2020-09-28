@@ -1,3 +1,7 @@
+/************************************/
+/*				COLORS				*/
+/************************************/
+
 :root {
     --basic-black: #000000;
     --basic-dark: #363636;
@@ -13,3 +17,650 @@
     --status-pink-light: #f6dada;
 
 }
+
+/************************************/
+/*				FONTS				*/
+/************************************/
+
+@font-face {
+  font-family: "Open Sans";
+  src:
+  	url("../fonts/opensans.woff2") format("woff2"),
+  	url("../fonts/opensans.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src:
+  	url("../fonts/opensanslight.woff2") format("woff2"),
+  	url("../fonts/opensanslight.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src:
+  	url("../fonts/gilroyextrabold.woff2") format("woff2"),
+  	url("../fonts/gilroyextrabold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src:
+  	url("../fonts/gilroylight.woff2") format("woff2"),
+  	url("../fonts/gilroylight.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+/************************************/
+/*				BODY				*/
+/************************************/
+
+.page-body {
+	min-width: 1160px;
+	margin: 0;
+	padding: 0;
+	font-family: "Open Sans", Arial, sans-serif;
+	font-size: 15px;
+	color: var(--basic-black);
+	background-color: var(--basic-white);
+}
+
+/* СТИЛИЗАЦИЯ ВСЕХ ОДНОТИПНЫХ ССЫЛОК */
+
+.button {
+	font-family: Gilroy;
+	font-style: normal;
+	font-weight: 800;
+	font-size: 18px;
+	line-height: 22px;
+	letter-spacing: 0.2em;
+	text-align: center;
+	text-transform: uppercase;
+	color: var(--basic-black);
+}
+
+/* СТИЛИЗАЦИЯ ВСЕХ ЗАГОЛОВКОВ */
+
+.page-body h3, h2 {
+	font-family: Gilroy;
+	font-style: normal;
+	font-weight: 800;
+	font-size: 47px;
+	line-height: 58px;
+	letter-spacing: 0.2em;
+	color: var(--basic-black);
+}
+
+/* СКРЫТИЕ ЭЛЕМЕНТА */
+
+.hidden {
+	display: none;
+}
+
+/************************************/
+/*			GLOBAL CLASS			*/
+/************************************/
+
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/************************************/
+/*				HEADER				*/
+/************************************/
+
+.main-header {
+	color: var(--basic-black);
+	background-color: var(--special-yellow);
+}
+
+.main-header a {
+	color: var(--basic-black);
+}
+
+.header-logo,
+.footer-logo {
+	width: 163px;
+	height: 35px;
+}
+
+/*	ФОРМА ПОИСКА	*/
+
+.search {
+	font-family: Open Sans;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 15px;
+	line-height: 20px;
+	border: none;
+	width: 144px;
+	height: 20px;
+	color: var(--basic-black);
+	background-color: transparent;
+	opacity: .3
+}
+
+.search:hover {
+	color: var(--basic-black);
+	opacity: 0.6;
+}
+
+.search:focus {
+	outline: none;
+	color: var(--basic-black);
+	opacity: 1;
+}
+
+.search-button {
+	font-family: Open Sans;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 15px;
+	line-height: 20px;
+	border: 2px solid var(--basic-black);
+	border-radius: 0;
+	text-transform: uppercase;
+	color: var(--basic-black);
+	background-color: transparent;
+}
+
+.search-button:hover {
+	color: var(--basic-white);
+	background-color: var(--basic-black);
+
+}
+
+.search-button:active {
+	color: rgba(255,255,255, 0.3);
+	background-color: var(--basic-black);
+}
+
+
+/* СТИЛИЗАЦИЯ НАВИГАЦИИ */
+
+.user-navigation {
+	font-family: Open Sans;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 15px;
+	line-height: 20px;
+}
+
+.catalog-navigation {
+	font-family: Gilroy;
+	font-style: normal;
+	font-weight: 800;
+	font-size: 18px;
+	line-height: 22px;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+	color: var(--basic-black);
+	background-color: transparent;
+}
+
+.catalog-submenu {
+	font-family: Open Sans;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 15px;
+	line-height: 20px;
+	letter-spacing: normal;
+	text-transform: capitalize;
+	color: var(--basic-black);
+	background-color: transparent;
+}
+
+.site-navigation {
+	font-family: Gilroy;
+	font-style: normal;
+	font-weight: 800;
+	font-size: 18px;
+	line-height: 22px;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+	color: var(--basic-black);
+	background-color: transparent;
+}
+
+/*	УБИРАЕМ LIST-STYLE У ВСЕХ СПИСКОВ В HEADER */
+
+.user-navigation,
+.catalog-navigation,
+.catalog-submenu,
+.site-navigation {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+}
+
+/************************************/
+/*			ПСЕВДОКЛАССЫ			*/
+/************************************/
+
+/* не знаю насколько это разумно выделять в отдельный смысловой блок псевдоклассы */
+
+.header-logo:hover,
+.catalog-link:hover,
+.catalog-submenu a:hover,
+.user-navigation a:hover,
+.site-navigation a:hover,
+.footer-logo:hover,
+.academy-button:hover,
+.footer-site-navigation a:hover {
+	opacity: 0.6;
+	
+}
+
+.header-logo:active,
+.catalog-link:active,
+.catalog-submenu a:active,
+.user-navigation a:active,
+.site-navigation a:active,
+.footer-logo:active,
+.academy-button:active,
+.footer-site-navigation a:active {
+	opacity: 0.3;
+	
+}
+
+/************************************/
+/*				MAIN				*/
+/************************************/
+
+.container a {
+	color: var(--basic-black);
+}
+
+.catalog-list,
+.services-list,
+.brands-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+/*	ОСНОВНОЙ КАТАЛОГ */
+
+.catalog {
+	font-family: Gilroy;
+	font-style: normal;
+	font-weight: 800;
+	font-size: 18px;
+	line-height: 22px;
+	letter-spacing: 0.05em;
+	color: var(--basic-black);
+}
+
+/*	ИЗОБРАЖЕНИЯ ИЗ КАТАЛОГА	*/
+
+.virtual-reality {
+	width: 97px;
+	height: 55px;
+}
+
+.selfie-monopods {
+	width: 86px;
+	height: 117px;
+}
+
+.action-cameras {
+	width: 71px;
+	height: 87px;
+}
+
+.fitness-bracelets {
+	width: 107px;
+	height: 65px;
+}
+.smart-watch {
+	width: 56px;
+	height: 98px;
+}
+.quadcopters {
+	width: 132px;
+	height: 69px;
+}
+
+/* БЛОК ПРОИЗВОДИТЕЛЕЙ */
+
+.images-brands {
+	width: 260px;
+	height: 100px;
+}
+
+/* БЛОК СЕРВИСЫ */
+
+.services {
+	font-family: Open Sans;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 15px;
+	line-height: 28px;
+	letter-spacing: 0.1em;
+	color: var(--basic-black);
+	background-color: var(--basic-gray-light);
+}
+
+/* БЛОК О НАС */
+
+.about {
+	font-family: "Open Sans", Arial, sans-serif;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 15px;
+	line-height: 28px;
+	color: var(--basic-black);
+	background-color: transparent;
+}
+
+.about-list {
+	font-family: Gilroy;
+	font-style: normal;
+	font-weight: 800;
+	font-size: 16px;
+	line-height: 28px;
+	color: var(--basic-black);
+	background-color: transparent;
+}
+/* БЛОК КОНТАКТЫ */
+
+.contacts {
+	font-family: Open Sans;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 15px;
+	line-height: 28px;
+	color: var(--basic-black);
+	background-color: transparent;
+}
+
+.rectangle {
+	width: 80px;
+	height: 7px;
+	background-color: var(--basic-black);
+}
+
+.rectangle-footer {
+	width: 80px;
+	height: 7px;
+	background-color: #FFC600;
+}
+
+/************************************/
+/*				FOOTER				*/
+/************************************/
+
+.main-footer {
+	color: var(--basic-white);
+	background-color: var(--basic-dark);
+}
+
+.main-footer a {
+	color: var(--basic-white);
+}
+
+/*	убираем list-style у списков */
+
+.footer-user-navigation,
+.footer-site-navigation,
+.footer-social-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+/*  навигационные блоки в footer */
+
+.footer-user-navigation {
+	font-family: Open Sans;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 15px;
+	line-height: 20px;
+	color: rgba(255, 255, 255, 0.7);
+	background-color: transparent;
+}
+
+/* иконки user-navigation, таким образом избежал множество проблем с разметкой */
+
+.footer-user-navigation li:nth-child(1) a:before {
+	background: url("../img/icon-user-footer.svg") no-repeat center;
+    display: inline-block;
+    width: 14px; 
+    height: 14px;
+    content:"";
+  }
+
+.footer-user-navigation li:nth-child(2) a:before {
+	background: url("../img/icon-compare-footer.svg") no-repeat center;
+    display: inline-block;
+    width: 14px; 
+    height: 14px;
+    content:"";
+  }
+
+  .footer-user-navigation li:nth-child(3) a:before {
+	background: url("../img/icon-basket-footer.svg") no-repeat center;
+    display: inline-block;
+    width: 14px; 
+    height: 14px;
+    content:"";
+  }
+
+.footer-user-navigation a { opacity: 0.7; }
+.footer-user-navigation a:hover { opacity: 1 }
+.footer-user-navigation a:active { opacity: 0.3; }
+
+.footer-site-navigation {
+	font-family: Gilroy;
+	font-style: normal;
+	font-weight: 800;
+	font-size: 18px;
+	line-height: 22px;
+	letter-spacing: 0.2em;
+	color: var(--basic-white);
+	text-transform: uppercase;
+	background-color: transparent;
+
+}
+
+.footer-address,
+.footer-phone {
+	font-family: Open Sans;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 15px;
+	line-height: 20px;
+	color: var(--basic-white);
+}
+
+.social-button {
+	width: 32px;
+	height: 32px;
+	color: var(--basic-white);
+	opacity: 0.3;
+}
+
+.social-button:hover { opacity: 0.6; }
+.social-button:active { opacity: 0.1; }
+
+
+/************************************/
+/*			PAGE CATALOG			*/
+/************************************/
+
+.search-filter {
+	background-color: var(--basic-gray-light);
+}
+
+/*	убираем list-style у списков */
+
+.catalog-sort-list,
+.catalog-sort-button,
+.crumbs-list,
+.products-list,
+.pagination-list,
+.sub-pagination-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+/* выставляем все списки в строчку */
+
+.catalog-sort li { display: inline; }
+
+/* стили заголовков в блоке page-catalog <main> */
+
+.page-catalog h3 {
+	font-family: Gilroy;
+	font-style: normal;
+	font-weight: 800;
+	font-size: 16px;
+	line-height: 20px;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+}
+
+/* блок с крошками */
+
+.crumbs-list li {
+	font-family: Open Sans;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 19px;
+	color: var(--basic-black);
+	display: inline-block;
+}
+.crumbs-list a { opacity: 0.3; color: var(--basic-black); }
+
+.crumbs-list li:not(:first-child):before {
+	background: url("../img/crumbs.svg") no-repeat center;
+    display: inline-block;
+    width: 4px; 
+    height: 6px;
+    opacity: 1.0;
+    content: "";
+  }
+
+/* задаем шрифт и цвет (ссылкам) в списке в блоке catalog-sort */
+
+.catalog-header {
+	background-color: var(--basic-gray-light);
+}
+.catalog-sort {
+	background-color: #DCDCDC;
+}
+.catalog-sort a {
+	font-family: Open Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 19px;
+	color: var(--basic-black);
+}
+
+/* определяем маркером current активный элемент в фильтре */
+
+.catalog-sort-list li:not(.current)        { opacity: 0.3; }
+.catalog-sort-list li:not(.current):hover  { opacity: 0.6; }
+.catalog-sort-list li:not(.current):active { opacity: 1.0; }
+
+/* не работает даже с тройным вложением (... img {} ) */
+
+.catalog-sort-button li:not(.current)        { opacity: 0.3; }
+.catalog-sort-button li:not(.current):hover  { opacity: 0.6; }
+.catalog-sort-button li:not(.current):active { opacity: 1.0; }
+
+
+/* блок продуктов */
+
+.products-list li{
+	display: inline-block;
+
+}
+.product-info a {
+	font-family: Gilroy;
+	font-style: normal;
+	font-weight: 800;
+	font-size: 18px;
+	line-height: 22px;
+	letter-spacing: 0.05em;
+	color: var(--basic-black);
+}
+
+.product-info p {
+	font-family: Gilroy;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 18px;
+	letter-spacing: 0.05em;
+	color: var(--basic-black);
+}
+
+.product-image:hover {
+	opacity: 0.7;
+}
+
+/* пагинация */
+
+.pagination {
+	font-family: Gilroy;
+	font-style: normal;
+	font-weight: 800;
+	font-size: 16px;
+	line-height: 20px;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: var(--basic-black)
+	background-color: #EBEBEB;
+}
+
+.pagination a {
+	color: var(--basic-black);
+}
+
+.pagination-list,
+.pagination-list li,
+.pagination-back,
+.pagination-forward {
+	display: inline-block;
+}
+
+.pagination-back:hover,
+.pagination-forward:hover {
+	display: inline-block;
+	background: #D9D9D9;
+}
+
+/* здесь ошибка, нужно сделать что-бы прозрачность менял только текст, а не весь блок */
+
+.pagination-back:active,
+.pagination-forward:active {
+	display: inline-block;
+	background: #D9D9D9;
+	opacity: 0.3;
+}
+
+/* использую ту же логику что использовал в крошках */
+
+.pagination-list li:not(.current)        { opacity: 0.3; }
+.pagination-list li:not(.current):hover  { opacity: 0.6; }
+.pagination-list li:not(.current):active { opacity: 1.0; }

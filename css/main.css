@@ -23,39 +23,41 @@
 /************************************/
 
 @font-face {
-  font-family: "Open Sans";
-  src:
-  	url("../fonts/opensans.woff2") format("woff2"),
-  	url("../fonts/opensans.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
+	font-family: "Open Sans";
+	font-weight: 400;
+	font-style: normal;
+	src:	local('Open Sans Regular'), local('OpenSans-Regular'),
+			url("../fonts/opensans.woff2") format("woff2"),
+			url("../fonts/opensans.woff") format("woff");
+
 }
 
 @font-face {
-  font-family: "Open Sans";
-  src:
-  	url("../fonts/opensanslight.woff2") format("woff2"),
-  	url("../fonts/opensanslight.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
+	font-family: "Open Sans";
+	font-weight: 300;
+	font-style: normal;
+	src:	local('Open Sans Light'), local('OpenSans-Light'),
+			url("../fonts/opensanslight.woff2") format("woff2"),
+			url("../fonts/opensanslight.woff") format("woff");
+
 }
 
 @font-face {
-  font-family: "Gilroy";
-  src:
-  	url("../fonts/gilroyextrabold.woff2") format("woff2"),
-  	url("../fonts/gilroyextrabold.woff") format("woff");
-  font-weight: 800;
-  font-style: normal;
+	font-family: "Gilroy";
+	font-weight: 800;
+	font-style: normal;
+	src:
+		url("../fonts/gilroyextrabold.woff2") format("woff2"),
+		url("../fonts/gilroyextrabold.woff") format("woff");
 }
 
 @font-face {
-  font-family: "Gilroy";
-  src:
-  	url("../fonts/gilroylight.woff2") format("woff2"),
-  	url("../fonts/gilroylight.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
+	font-family: "Gilroy";
+	font-weight: 300;
+	font-style: normal;
+	src:
+		url("../fonts/gilroylight.woff2") format("woff2"),
+		url("../fonts/gilroylight.woff") format("woff");
 }
 
 /************************************/
@@ -75,7 +77,7 @@
 /* СТИЛИЗАЦИЯ ВСЕХ ОДНОТИПНЫХ ССЫЛОК */
 
 .button {
-	font-family: Gilroy;
+	font-family: Gilroy, Arial, sans-serif;
 	font-style: normal;
 	font-weight: 800;
 	font-size: 18px;
@@ -89,7 +91,7 @@
 /* СТИЛИЗАЦИЯ ВСЕХ ЗАГОЛОВКОВ */
 
 .page-body h3, h2 {
-	font-family: Gilroy;
+	font-family: Gilroy, Arial, sans-serif;
 	font-style: normal;
 	font-weight: 800;
 	font-size: 47px;
@@ -104,9 +106,9 @@
 	display: none;
 }
 
-/************************************/
-/*			GLOBAL CLASS			*/
-/************************************/
+/********************************************************/
+/*			GLOBAL CLASS	СОГЛАСНО КРИТЕРИЮ  Д25		*/
+/********************************************************/
 
 
 a {
@@ -141,7 +143,7 @@ img {
 /*	ФОРМА ПОИСКА	*/
 
 .search {
-	font-family: Open Sans;
+	font-family: "Open Sans", Arial, sans-serif;
 	font-style: normal;
 	font-weight: 300;
 	font-size: 15px;
@@ -166,7 +168,7 @@ img {
 }
 
 .search-button {
-	font-family: Open Sans;
+	font-family: "Open Sans", Arial, sans-serif;
 	font-style: normal;
 	font-weight: 300;
 	font-size: 15px;
@@ -193,7 +195,7 @@ img {
 /* СТИЛИЗАЦИЯ НАВИГАЦИИ */
 
 .user-navigation {
-	font-family: Open Sans;
+	font-family: "Open Sans", Arial, sans-serif;
 	font-style: normal;
 	font-weight: 300;
 	font-size: 15px;
@@ -201,7 +203,7 @@ img {
 }
 
 .catalog-navigation {
-	font-family: Gilroy;
+	font-family: Gilroy, Arial, sans-serif;
 	font-style: normal;
 	font-weight: 800;
 	font-size: 18px;
@@ -213,7 +215,7 @@ img {
 }
 
 .catalog-submenu {
-	font-family: Open Sans;
+	font-family: "Open Sans", Arial, sans-serif;
 	font-style: normal;
 	font-weight: 300;
 	font-size: 15px;
@@ -225,7 +227,7 @@ img {
 }
 
 .site-navigation {
-	font-family: Gilroy;
+	font-family: Gilroy, Arial, sans-serif;
 	font-style: normal;
 	font-weight: 800;
 	font-size: 18px;
@@ -297,7 +299,7 @@ img {
 /*	ОСНОВНОЙ КАТАЛОГ */
 
 .catalog {
-	font-family: Gilroy;
+	font-family: Gilroy, Arial, sans-serif;
 	font-style: normal;
 	font-weight: 800;
 	font-size: 18px;
@@ -346,7 +348,7 @@ img {
 /* БЛОК СЕРВИСЫ */
 
 .services {
-	font-family: Open Sans;
+	font-family: "Open Sans", Arial, sans-serif;
 	font-style: normal;
 	font-weight: 300;
 	font-size: 15px;
@@ -369,7 +371,7 @@ img {
 }
 
 .about-list {
-	font-family: Gilroy;
+	font-family: Gilroy, Arial, sans-serif;
 	font-style: normal;
 	font-weight: 800;
 	font-size: 16px;
@@ -380,7 +382,7 @@ img {
 /* БЛОК КОНТАКТЫ */
 
 .contacts {
-	font-family: Open Sans;
+	font-family: "Open Sans", Arial, sans-serif;
 	font-style: normal;
 	font-weight: 300;
 	font-size: 15px;
@@ -427,7 +429,7 @@ img {
 /*  навигационные блоки в footer */
 
 .footer-user-navigation {
-	font-family: Open Sans;
+	font-family: "Open Sans", Arial, sans-serif;
 	font-style: normal;
 	font-weight: 300;
 	font-size: 15px;
@@ -467,7 +469,7 @@ img {
 .footer-user-navigation a:active { opacity: 0.3; }
 
 .footer-site-navigation {
-	font-family: Gilroy;
+	font-family: Gilroy, Arial, sans-serif;
 	font-style: normal;
 	font-weight: 800;
 	font-size: 18px;
@@ -481,7 +483,7 @@ img {
 
 .footer-address,
 .footer-phone {
-	font-family: Open Sans;
+	font-family: "Open Sans", Arial, sans-serif;
 	font-style: normal;
 	font-weight: 300;
 	font-size: 15px;
@@ -528,7 +530,7 @@ img {
 /* стили заголовков в блоке page-catalog <main> */
 
 .page-catalog h3 {
-	font-family: Gilroy;
+	font-family: Gilroy, Arial, sans-serif;
 	font-style: normal;
 	font-weight: 800;
 	font-size: 16px;
@@ -540,7 +542,7 @@ img {
 /* блок с крошками */
 
 .crumbs-list li {
-	font-family: Open Sans;
+	font-family: "Open Sans", Arial, sans-serif;
 	font-style: normal;
 	font-weight: 300;
 	font-size: 14px;
@@ -568,7 +570,7 @@ img {
 	background-color: #DCDCDC;
 }
 .catalog-sort a {
-	font-family: Open Sans;
+	font-family: "Open Sans", Arial, sans-serif;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 14px;
@@ -596,7 +598,7 @@ img {
 
 }
 .product-info a {
-	font-family: Gilroy;
+	font-family: Gilroy, Arial, sans-serif;
 	font-style: normal;
 	font-weight: 800;
 	font-size: 18px;
@@ -606,7 +608,7 @@ img {
 }
 
 .product-info p {
-	font-family: Gilroy;
+	font-family: Gilroy, Arial, sans-serif;
 	font-style: normal;
 	font-weight: 300;
 	font-size: 16px;
@@ -622,7 +624,7 @@ img {
 /* пагинация */
 
 .pagination {
-	font-family: Gilroy;
+	font-family: Gilroy, Arial, sans-serif;
 	font-style: normal;
 	font-weight: 800;
 	font-size: 16px;

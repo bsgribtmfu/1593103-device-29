@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Станислав](https://up.htmlacademy.ru/htmlcss/29/user/1593103).
-* Наставник: [Анастасия Полозова](https://htmlacademy.ru/profile/id258631).
+* Наставник: [Сергей Шрамко](https://htmlacademy.ru/profile/id852139).
 
 ---
 

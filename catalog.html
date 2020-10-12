@@ -18,14 +18,14 @@
 	    <link rel="stylesheet" href="fonts/gilroyextrabold.woff">
 	    <link rel="stylesheet" href="fonts/gilroyextrabold.woff2">
 
-	    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+	    <link rel="stylesheet" href="css/normalize-8.0.1.css">
 	    <link rel="stylesheet" href="css/main.css">
 	    <title>HTML Academy: Девайс</title>
 	</head>
 
 	<body class="page-body">
-		<header class="container main-header">
-			<div class="header-wr">
+        <header class="container main-header">
+			<div class="header-wrapper">
 				<a class="header-logo" href="index.html"><img src="img/icon-logo.svg" width="163" height="35" alt="Логотип магазина"></a>
 		  		<form class="header-form" action="#" method="post">
 		  			<img src="img/icon-search.svg" width="12" height="12" alt="Поиск"> <!-- используем псевдоэлемент ::before -->
@@ -48,7 +48,6 @@
   					<a href="#">Корзина</a>
   				</li>
   			</ul>
-
 			<nav class="main-navigation">
 				<ul class="catalog-navigation">
 					<li>
@@ -70,7 +69,10 @@
 	  				<li><a class="button" href="contacts.html">Контакты</a></li>
   				</ul>
 			</nav>
-	  	</header>
+          </header>
+
+
+
 
 		<main class="page-catalog container">
 			<h2>Моноподы для селфи</h2>
@@ -86,27 +88,29 @@
 				<!-- форма фильтра, лектор сказал что бы пока-что не делали :/ -->
 			</section>
 
-				<div class="filter-header"><h3>Фильтр</h3></div>
-				<div class="catalog-sort">
-					<h3>Сортировка:</h3>
-					<ul class="catalog-sort-list">
-						<li class="current"><a href="#">По цене</a></li>
-						<li><a href="#">По типу</a></li>
-						<li><a href="#">По популярности</a></li>
-					</ul>
-					<ul class="catalog-sort-button">
-						<li class="current">
-							<a href="#">
-								<img src="img/button-sort-up.svg" width="10" height="10" alt="Иконка для сортировки 1">
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<img src="img/button-sort-down.svg" width="10" height="10" alt="Иконка для сортировки 2">
-							</a>
-						</li>
-					</ul>
-				</div>
+            <div class="catalog-header-wrapper">
+                <div class="filter-header"><h3>Фильтр:</h3></div>
+                <div class="catalog-sort-header">
+                    <h3>Сортировка:</h3>
+                    <ul class="catalog-sort-list">
+                        <li class="current"><a href="#">По цене</a></li>
+                        <li><a href="#">По типу</a></li>
+                        <li><a href="#">По популярности</a></li>
+                    </ul>
+                    <ul class="catalog-sort-buttons">
+                        <li class="current">
+                            <a href="#">
+                                <img src="img/button-sort-up.svg" width="10" height="10" alt="Иконка для сортировки 1">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/button-sort-down.svg" width="10" height="10" alt="Иконка для сортировки 2">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
 			<section class="catalog-products">
 				<h2 class="hidden"> Список моноподов для селфи</h2>
@@ -127,7 +131,7 @@
 						</div>
 						<div class="product-info">
 							<a href="#">Профессиональная селфи-палка</a>
-							<span>1500 руб.</span>
+							<span>1 500 руб.</span>
 						</div>
 					</li>
 					<li class="products-item">
@@ -136,7 +140,7 @@
 						</div>
 						<div class="product-info">
 							<a href="#">Непотопляемая селфи-палка</a>
-							<span>2500 руб.</span>
+							<span>2 500 руб.</span>
 						</div>
 					</li>
 					<li class="products-item">
@@ -145,10 +149,12 @@
 						</div>
 						<div class="product-info">
 							<a href="#">Селфи-палка "следуй за мной"</a>
-							<span>4900 руб.</span>
+							<span>1 900 руб.</span>
 						</div>
 					</li>
 				</ul>
+
+
 
 				<div class="pagination">
 					<div class="pagination-back"><a href="#">Назад</a></div>
@@ -158,14 +164,19 @@
 						<li><a href="#">3</a></li>
 					</ul>
 					<div class="pagination-forward"><a href="#">Вперед</a></div>
-				</div>
+                </div>
+
+
+
 			</section>
-		</main>
+        </main>
+
+
 		<footer class="main-footer">
 			<div class="container footer-content">
 				<div class="footer-left">
 					<a class="footer-logo" href="index.html"><img src="img/icon-logo-footer.svg" width="163" height="35" alt="Logo"></a>
-					<address><a class="footer-address" href="#">г. Москва, ул. Строителей, 15</a></address>
+					<address class="footer-address-block"><a class="footer-address" href="#">г. Москва, ул. Строителей, 15</a></address>
 					<div class="rectangle-footer"></div> <!-- Rectangle 15 - в этом элементе будет выполнена заливка width: 80px; height: 7px; background: #FFC600;-->
 				</div>
 				<div class="footer-middle">
@@ -186,8 +197,8 @@
 						<li><a href="#">Сравнить</a></li>
 						<li><a href="#">Корзина</a></li>
 					</ul>
-					<a class="footer-phone" href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
-					<a class="academy-button" href="https://htmlacademy.ru/"><img src="img/icon-html-academy.svg" width="27" height="34" alt="Html Academy"></a>
+				    <a class="footer-phone" href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
+                    <a class="academy-button" href="https://htmlacademy.ru/"><img src="img/icon-html-academy.svg" width="27" height="34" alt="Html Academy"></a>
 				</div>
 			</div>
 		</footer>

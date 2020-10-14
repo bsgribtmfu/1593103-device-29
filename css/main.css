@@ -914,12 +914,13 @@ img {
 
 .crumbs-list a { opacity: 0.3; color: var(--basic-black); }
 
-.crumbs-list li:not(:first-child):before {
+.crumbs-list li:not(:first-child):before { /* почему-то перестало работать */
     background: url("../img/crumbs.svg") no-repeat center;
     width: 4px;
     height: 6px;
     opacity: 1.0;
-    content: " ";
+    content: "";
+    display: none;
 }
 
 .search-filter {

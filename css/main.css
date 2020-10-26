@@ -88,6 +88,10 @@
   background-color: transparent;
   z-index: 1;
   cursor: pointer;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .button::before {
@@ -102,6 +106,14 @@
   height: 8px;
   width: 100%;
   z-index: -1;
+}
+
+.button:hover {
+  background-color: var(--special-yellow-dark);
+}
+
+.button:active {
+ color: rgba(0, 0, 0, 0.3)
 }
 
 /*  СТИЛИЗАЦИЯ ВСЕХ ЗАГОЛОВКОВ  */
@@ -1378,6 +1390,15 @@ img {
   font-size: 13px;
   line-height: 18px;
   letter-spacing: 0.1em;
+  opacity: 0.3;
+}
+
+.compare-add:hover {
+  opacity: 1.0;
+}
+
+.compare-add:active {
+  opacity: 0.2;
 }
 
 .pagination {

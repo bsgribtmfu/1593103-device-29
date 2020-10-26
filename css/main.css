@@ -43,7 +43,7 @@
 
 @font-face {
   font-family: "Gilroy";
-  font-weight: 800;
+  font-weight: 700;
   font-style: normal;
   src:
       url("../fonts/gilroyextrabold.woff2") format("woff2"),
@@ -72,14 +72,12 @@
   background-color: var(--basic-white);
 }
 
-/*  СТИЛИЗАЦИЯ ВСЕХ ОДНОТИПНЫХ ССЫЛОК */
-
 .button {
   position: relative;
   border: none;
   font-family: "Gilroy", Arial, sans-serif;
   font-style: normal;
-  font-weight: 800;
+  font-weight: 700;
   font-size: 18px;
   line-height: 22px;
   letter-spacing: 0.2em;
@@ -108,15 +106,13 @@
   z-index: -1;
 }
 
-.button:hover {
+.button:not(.current):hover {
   background-color: var(--special-yellow-dark);
 }
 
 .button:active {
  color: rgba(0, 0, 0, 0.3)
 }
-
-/*  СТИЛИЗАЦИЯ ВСЕХ ЗАГОЛОВКОВ  */
 
 .page-body h3, h2 {
   font-family: "Gilroy", Arial, sans-serif;
@@ -126,8 +122,6 @@
   line-height: 58px;
   color: var(--basic-black);
 }
-
-/*  СКРЫТИЕ ЭЛЕМЕНТА */
 
 .visually-hidden {
   position: absolute;
@@ -243,8 +237,6 @@ img {
   border-color: var(--basic-black);
 }
 
-/*  что-бы появлялась скрытая кнопка в форме поиска которая по умолчанию скрыта, но ломается навигация с клавиатуры на всем сайте */
-
 .search:focus > .search-button {
   visibility: visible;
 }
@@ -269,7 +261,6 @@ img {
 .search-button:hover {
   color: var(--basic-white);
   background-color: var(--basic-black);
-
 }
 
 .search-button:active {
@@ -448,8 +439,19 @@ img {
 
 .slider-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   margin-bottom: -110px;
+  position: relative;
+}
+
+.slider-header::before {
+  content: "";
+  width: 100px;
+  height: 7px;
+  background-color: var(--basic-white);
+  position: absolute;
+  top: 50px;
+  left: 0;
 }
 
 .slider-image {
@@ -480,7 +482,7 @@ img {
   font-size: 179px;
   line-height: 219px;
   float: right;
-  margin-right: 50px; /* отступ на макете 60px, из-за особенностей шрифта сделал 50px */
+  margin-right: 50px;
   text-transform: uppercase;
   color: var(--basic-white);
 }
@@ -492,7 +494,7 @@ img {
   grid-template-columns: auto;
   grid-template-rows: min-content min-content;
   justify-content: flex-start;
-  column-gap: 46px; /* в разных слайдах есть разное кол-во элементо в списке опредление, и, разные расстояния между ними, почему-то */
+  column-gap: 46px;
   margin-top: 60px;
   letter-spacing: 0.1em;
 }
@@ -702,6 +704,10 @@ img {
   background-color: var(--basic-black);
 }
 
+.current .button::before {
+  display: none;
+}
+
 .services-list::before {
   position: absolute;
   content: "";
@@ -769,11 +775,11 @@ img {
 
 /* ИНФОРМАЦИОННЫЕ БЛОКИ */
 
-.index-columns p, h2 {
+.index-columns h2 {
   margin: 0;
   padding: 0;
-}
-.index-columns .about-head {
+  margin-bottom: 50px;
+  margin-top: 50px;
   letter-spacing: 0.2em;
 }
 
@@ -787,9 +793,17 @@ img {
 .index-columns .button {
   width: 260px;
   text-align: center;
+  margin-top: auto;
 }
 
-.about-head::before {
+.index-columns p {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 40px;
+  max-width: 475px;
+}
+
+.index-columns h2::before {
   width: 80px;
   height: 7px;
   background-color: var(--basic-black);
@@ -818,13 +832,13 @@ img {
   margin: 0;
   font-family: "Gilroy", Arial, sans-serif;
   font-style: normal;
-  font-weight: 800;
+  font-weight: 700;
   font-size: 16px;
   line-height: 28px;
   color: var(--basic-black);
   background-color: transparent;
-  margin-top: 60px;
-  margin-bottom: 84px;
+  margin-top: 20px;
+  margin-bottom: 75px;
   padding-left: 10px;
   list-style-type: circle;
 }
@@ -835,24 +849,6 @@ img {
 
 .about-list li:not(:last-child) {
   margin-bottom: 15px;
-}
-
-.about .about-head {
-  margin-top: 60px;
-}
-
-.about .paragraph-1 {
-  margin-top: 40px;
-  max-width: 475px;
-}
-
-.about .paragraph-2 {
-  margin-top: 40px;
-  max-width: 475px;
-}
-
-.about .button {
-  margin-top: auto;
 }
 
 .contacts {
@@ -869,21 +865,8 @@ img {
   position: relative;
 }
 
-.contacts .about-head {
-  margin-top: 60px;
-}
-
-.contacts .paragraph-1 {
-  margin-top: 40px;
-}
-
-.contacts .map {
-  margin-top: 40px;
-  margin-bottom: 84px;
-}
-
-.contacts .button {
-  margin-top: auto;
+.map {
+  margin-bottom: 75px;
 }
 
 /************************************/
@@ -1039,7 +1022,7 @@ img {
   list-style: none;
   font-family: "Gilroy", Arial, sans-serif;
   font-style: normal;
-  font-weight: 800;
+  font-weight: 700;
   font-size: 18px;
   line-height: 22px;
   letter-spacing: 0.2em;
@@ -1085,16 +1068,14 @@ img {
   min-height: 186px;
 }
 
-.page-catalog {}
-
 .page-catalog h1 {
   margin: 0;
   padding: 0;
   margin-top: 44px;
   margin-left: 60px;
-  font-family: Gilroy;
+  font-family: "Gilroy", Arial, sans-serif;
   font-style: normal;
-  font-weight: 800;
+  font-weight: 700;
   font-size: 47px;
   line-height: 58px;
 }
@@ -1226,6 +1207,7 @@ img {
   border: none;
   width: 10px;
   width: 10px;
+
 }
 
 .sort-button-item button::before {
@@ -1239,7 +1221,7 @@ img {
   width: 10px;
   height: 10px;
   cursor: pointer;
-  background-image: url(../img/button-sort.svg);
+  background-image: url("../img/button-sort.svg");
 }
 
 .sort-button-item:first-child button::before  { transform: rotate(180deg); }
@@ -1307,9 +1289,9 @@ img {
 }
 
 .product-image.new::before {
-  font-family: Gilroy;
+  font-family: "Gilroy", Arial, sans-serif;
   font-style: normal;
-  font-weight: 800;
+  font-weight: 700;
   font-size: 12px;
   color: var(--basic-black);
   text-transform: uppercase;
@@ -1356,12 +1338,11 @@ img {
   color: var(--basic-black);
 }
 
-.product-image:hover {
+.product-image:hover img {
   opacity: 0.7;
-
 }
 
-.product-image:hover .product-menu{
+.product-image:hover .product-menu {
   visibility: visible;
 }
 
@@ -1372,7 +1353,6 @@ img {
   align-items: center;
   position: absolute;
   top: 50%;
-  bottom: 0;
   left: 0;
   right: 0;
 }
@@ -1384,7 +1364,7 @@ img {
 
 .compare-add {
   margin-top: 22px;
-  font-family: Open Sans;
+  font-family: "Open Sans", Arial, sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 13px;
@@ -1404,7 +1384,7 @@ img {
 .pagination {
   font-family: "Gilroy", Arial, sans-serif;
   font-style: normal;
-  font-weight: 800;
+  font-weight: 700;
   font-size: 16px;
   line-height: 20px;
   letter-spacing: 0.1em;
@@ -1469,7 +1449,6 @@ img {
   min-height: 100%;
   display: grid;
   grid-template-rows: min-content 1fr min-content;
-  /*  шапка занимает высоту по своему контенту, как и подвал, а контентная часть занимает всё возможное пространство. */
   align-content: start;
   margin-top: 40px;
 }
@@ -1482,7 +1461,7 @@ img {
   margin: 0;
   padding: 0;
   border: none;
-  font-family: Gilroy;
+  font-family: "Gilroy", Arial, sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
@@ -1519,18 +1498,13 @@ img {
   border-radius: 5px;
 }
 
-.range-controls .scale {
-  height: 2px;
-  background: #d7dcde;
-}
-
-.range-controls .bar {
+.bar {
   width: 70%;
   height: 2px;
   background: #91C92F;
 }
 
-.range-controls .toggle {
+.toggle {
   position: absolute;
   top: 0;
   left: 0;
@@ -1544,19 +1518,24 @@ img {
   cursor: pointer;
 }
 
-.range-controls .toggle-min {
+.toggle-min {
   left: 0;
 }
 
-.range-controls .toggle-max {
+.toggle-max {
   left: 160px;
+}
+
+.scale {
+  height: 2px;
+  background: #d7dcde;
 }
 
 .toogle-min-count,
 .toogle-max-count {
   position: relative;
   margin-top: 20px;
-  font-family: Gilroy;
+  font-family: "Gilroy", Arial, sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 14px;
@@ -1565,6 +1544,7 @@ img {
 
 .toogle-counts {
   display: flex;
+  text-transform: lowercase;
 }
 
 .option {
@@ -1579,7 +1559,7 @@ img {
 .check {
   padding-left: 42px;
   word-break: break-all;
-  font-family: Open Sans;
+  font-family: "Open Sans", Arial, sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 14px;
@@ -1603,7 +1583,7 @@ img {
 /* выбранный */
 
 .check-input:checked + .check-box {
-  background-image: url(../img/check.svg);
+  background-image: url("../img/check.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -1685,9 +1665,9 @@ img {
   box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.15);
   display: flex;
   flex-direction: column;
-  font-family: Gilroy;
+  font-family: "Gilroy", Arial, sans-serif;
   font-style: normal;
-  font-weight: 800;
+  font-weight: 700;
   font-size: 18px;
   line-height: 22px;
 }
@@ -1716,7 +1696,7 @@ img {
 .modal-form-name input,
 .modal-form-email input,
 .modal-form-text textarea {
-  font-family: Open Sans;
+  font-family: "Open Sans", Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -1741,7 +1721,7 @@ img {
 .modal-form-text textarea:active {
   background-color: transparent;
   outline: none;
-  border: 2px solid #F7E296;
+  border: 2px solid var(--special-yellow-light);
 }
 
 .modal-form-name input:focus,
@@ -1749,7 +1729,7 @@ img {
 .modal-form-text textarea:focus{
   background-color: transparent;
   outline: none;
-  border: 2px solid #F7E296;
+  border: 2px solid var(--special-yellow-light);
 }
 
 .modal-form-name input,

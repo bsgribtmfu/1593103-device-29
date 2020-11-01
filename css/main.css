@@ -1575,19 +1575,18 @@ img {
   margin-bottom: 49px;
 }
 
-/* .filter-item legend::after {
+.filter-item legend::after {
   position: absolute;
   background-color: var(--basic-black);
   content: "";
   left: 0;
-  top: -62px;
+  top: -17px;
   height: 2px;
   width: 100%;
-} */
+}
 
 .filter-item legend {
   margin-bottom: 30px;
-
 }
 
 .range-filter {
@@ -1602,9 +1601,10 @@ img {
 }
 
 .bar {
-  width: 70%;
+  width: 60%;
   height: 2px;
   background: #91C92F;
+  margin-left: 0;
 }
 
 .toggle {
@@ -1631,11 +1631,19 @@ img {
 
 .toggle-max {
   left: 160px;
+  left: 57%;
 }
 
 .scale {
   height: 2px;
   background: #d7dcde;
+}
+
+.toogle-min-count {
+  margin-left: 0;
+}
+.toogle-max-count {
+  margin-left: 35%;
 }
 
 .toogle-min-count,

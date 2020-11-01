@@ -70,28 +70,20 @@
           </div>
           <div class="catalog-sort-header">
             <h2>Сортировка:</h2>
-            <ul class="catalog-sort-list">
-              <li class="sort-item current"><a href="#">По цене</a></li>
-              <li class="sort-item"><a href="#">По типу</a></li>
-              <li class="sort-item"><a href="#">По популярности</a></li>
-            </ul>
-            <ul class="catalog-sort-buttons">
-              <li class="sort-button-item">
-                <button aria-label="Сортировка по возрастанию"><span class="visually-hidden">По возрастанию<</span></button>
-              </li>
-              <li class="sort-button-item current">
-                <button aria-label="Сортировка по убыванию"><span class="visually-hidden">По убыванию</span></button>
-              </li>
-            </ul>
+            <a class="button-sort button-sort-current" href="#">По цене</a>
+            <a class="button-sort" href="#">По типу</a>
+            <a class="button-sort" href="#">По популярности</a>
+            <a class="button-sort button-sort-up" href="#"><span class="visually-hidden">1</span></a>
+            <a class="button-sort button-sort-down button-sort-current" href="#"><span class="visually-hidden">1</span></a>
          </div>
         </div>
       </div>
       <div class="catalog-wrapper">
         <div class="container">
           <aside class="search-filter">
-            <form class="search-form" method="get" action="https://echo.htmlacademy.ru/">
+            <form class="search-form" method="post" action="https://echo.htmlacademy.ru/">
               <fieldset class="filter-item">
-                <legend>Стоимость:</legend>
+                <legend>Стоимость</legend>
                 <div class="range-filter">
                   <div class="range-controls">
                     <div class="scale">
@@ -103,52 +95,54 @@
                     </div>
                     <div class="toogle-counts">
                       <div class="toogle-min-count" style="margin-left: 0">от 0</div>
-                      <div class="toogle-max-count" style="margin-left: 30%">до 5000</div>
+                      <div class="toogle-max-count" style="margin-left: 35%">до 5000</div>
                     </div>
                   </div>
                 </div>
               </fieldset>
               <fieldset class="filter-item">
-                <legend>Цвет:</legend>
+                <legend>Цвет</legend>
                 <label class="check option">
-                  <input type="checkbox" class="check-input visually-hidden" checked>
+                  <input name="color" type="checkbox" class="check-input visually-hidden" value="black" checked>
                   <span class="check-box"></span>
                   Черный
                 </label>
                 <label class="check option">
-                  <input type="checkbox" class="check-input visually-hidden">
+                  <input name="color" type="checkbox" class="check-input visually-hidden" value="white">
                   <span class="check-box"></span>
                   Белый
                 </label>
                 <label class="check option">
-                  <input type="checkbox" class="check-input visually-hidden" checked>
+                  <input name="color" type="checkbox" class="check-input visually-hidden" value="blue" checked>
                   <span class="check-box"></span>
                   Синий
                 </label>
                 <label class="check option">
-                  <input type="checkbox" class="check-input visually-hidden" checked>
+                  <input name="color" type="checkbox" class="check-input visually-hidden" value="red" checked>
                   <span class="check-box"></span>
                   Красный
                 </label>
                 <label class="check option">
-                  <input type="checkbox" class="check-input visually-hidden">
+                  <input name="color" type="checkbox" class="check-input visually-hidden" value="pink">
                   <span class="check-box"></span>
                   Pозовый
                 </label>
               </fieldset>
+
               <fieldset class="filter-item">
-                <legend>Bluetooth:</legend>
+                <legend>Bluetooth</legend>
                 <label class="check option">
-                  <input type="radio" class="check-radio-input visually-hidden" checked>
+                  <input name="bluetooth" type="radio" class="check-input-radio visually-hidden" value="true" checked>
                   <span class="check-box"></span>
                   Есть
                 </label>
                 <label class="check option">
-                  <input type="radio" class="check-radio-input visually-hidden">
-                  <span class="check-box"></span>
+                  <input name="bluetooth" type="radio" class="check-input-radio visually-hidden" value="false">
+                  <span class="check-box check-radio"></span>
                   Нет
-                  </label>
+                </label>
               </fieldset>
+
               <button class="button" type="submit">Показать</button>
             </form>
           </aside>
@@ -165,7 +159,7 @@
                 </div>
                 <div class="product-info">
                   <a href="#">Любительская селфи-палка</a>
-                  <span>1 500 руб.</span>
+                  <span>1 100 руб.</span>
                 </div>
               </li>
               <li class="products-item">
@@ -177,7 +171,7 @@
                   </div>
                 </div>
                 <div class="product-info">
-                  <a href="#">Профессиональная селфи-палка</a>
+                  <a href="#">Профессиональная<br>селфи-палка</a>
                   <span>1 500 руб.</span>
                 </div>
               </li>
@@ -190,7 +184,7 @@
                   </div>
                 </div>
                 <div class="product-info">
-                  <a href="#">Непотопляемая селфи-палка</a>
+                  <a href="#">Непотопляемая<br>селфи-палка</a>
                   <span>2 500 руб.</span>
                 </div>
               </li>
@@ -203,7 +197,7 @@
                   </div>
                 </div>
                 <div class="product-info">
-                  <a href="#">Селфи-палка "следуй за мной"</a>
+                  <a href="#">Селфи-палка «Следуй за мной»</a>
                   <span>1 900 руб.</span>
                 </div>
               </li>

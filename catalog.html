@@ -27,27 +27,27 @@
         </ul>
       </div>
       <nav class="main-navigation">
-        <ul class="catalog-navigation">
-            <a class="catalog-link" href="#">Каталог товаров</a>
-            <div class="catalog-submenu">
-              <div>
-                <a href="#">Виртуальная реальность</a>
-                <a href="#">Моноподы для селфи</a>
-                <a href="#">Экшн-камеры</a>
+        <ul class="main-navigation-list">
+            <li class="main-navigation-item">
+              <a class="catalog-link" href="catalog.html">Каталог товаров</a>
+              <div class="catalog-submenu">
+                <div>
+                  <a href="#">Виртуальная реальность</a>
+                  <a href="#">Моноподы для селфи</a>
+                  <a href="#">Экшн-камеры</a>
+                </div>
+                <div>
+                  <a href="#">Фитнес-браслеты</a>
+                  <a href="#">Умные часы</a>
+                </div>
+                <div>
+                  <a href="#">Квадрокоптеры</a>
+                </div>
               </div>
-              <div>
-                <a href="#">Фитнес-браслеты</a>
-                <a href="#">Умные часы</a>
-              </div>
-              <div>
-                <a href="#">Квадрокоптеры</a>
-              </div>
-            </div>
-        </ul>
-        <ul class="site-navigation">
-          <li><a href="#">Доставка</a></li>
-          <li><a href="#">Гарантия</a></li>
-          <li><a href="#">Контакты</a></li>
+            </li>
+          <li class="main-navigation-item"><a href="#">Доставка</a></li>
+          <li class="main-navigation-item"><a href="#">Гарантия</a></li>
+          <li class="main-navigation-item"><a href="#">Контакты</a></li>
         </ul>
       </nav>
     </header>
@@ -73,8 +73,8 @@
             <a class="button-sort button-sort-current" href="#">По цене</a>
             <a class="button-sort" href="#">По типу</a>
             <a class="button-sort" href="#">По популярности</a>
-            <a class="button-sort button-sort-up" href="#"><span class="visually-hidden">1</span></a>
-            <a class="button-sort button-sort-down button-sort-current" href="#"><span class="visually-hidden">1</span></a>
+            <a class="button-sort button-sort-up" href="#"></a>
+            <a class="button-sort button-sort-down button-sort-current" href="#"></a>
          </div>
         </div>
       </div>
@@ -93,10 +93,14 @@
                     </div>
                     <div class="toggle toggle-max" tabindex="0">
                     </div>
-                    <div class="toogle-counts">
-                      <div class="toogle-min-count">от 0</div>
-                      <div class="toogle-max-count">до 5000</div>
-                    </div>
+                    <label class="toogle-min-count">
+                      от
+                      <input name="color" name="min-price" type="text" value="0">
+                    </label>
+                    <label class="toogle-max-count">
+                      до
+                      <input name="color" name="min-price" type="text" value="5000">
+                    </label>
                   </div>
                 </div>
               </fieldset>

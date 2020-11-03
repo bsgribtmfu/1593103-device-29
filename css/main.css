@@ -1,7 +1,3 @@
-/************************************/
-/*              COLORS              */
-/************************************/
-
 :root {
   --basic-black: #000000;
   --basic-dark: #363636;
@@ -17,10 +13,6 @@
   --status-pink-light: #f6dada;
 }
 
-/************************************/
-/*              FONTS               */
-/************************************/
-
 @font-face {
   font-family: "Open Sans";
   font-weight: 400;
@@ -28,7 +20,6 @@
   src:  local('Open Sans Regular'), local('OpenSans-Regular'),
         url("../fonts/opensans.woff2") format("woff2"),
         url("../fonts/opensans.woff") format("woff");
-
 }
 
 @font-face {
@@ -38,7 +29,6 @@
   src:  local('Open Sans Light'), local('OpenSans-Light'),
         url("../fonts/opensanslight.woff2") format("woff2"),
         url("../fonts/opensanslight.woff") format("woff");
-
 }
 
 @font-face {
@@ -58,10 +48,6 @@
       url("../fonts/gilroylight.woff2") format("woff2"),
       url("../fonts/gilroylight.woff") format("woff");
 }
-
-/************************************/
-/*              BODY                */
-/************************************/
 
 .page-body {
   min-width: 1160px;
@@ -140,10 +126,6 @@
   display: none;
 }
 
-/********************************************************/
-/*         GLOBAL CLASS    СОГЛАСНО КРИТЕРИЮ  Д25       */
-/********************************************************/
-
 a {
   text-decoration: none;
 }
@@ -152,10 +134,6 @@ img {
   max-width: 100%;
   height: auto;
 }
-
-/************************************/
-/*              HEADER              */
-/************************************/
 
 .main-header {
   position: relative;
@@ -290,10 +268,6 @@ img {
   margin-left: auto;
   margin-right: 41px;
 }
-
-/***************************/
-/*       NAVIGATION        */
-/***************************/
 
 .main-navigation {
   margin-top: 34px;
@@ -431,10 +405,6 @@ img {
 .cart-header a::before {
   background-image: url("../img/icon-cart-header.svg");
 }
-
-/************************************/
-/*              СЛАЙДЕРЫ            */
-/************************************/
 
 .sliders-list {
   padding: 0;
@@ -615,10 +585,6 @@ img {
   cursor: pointer;
 }
 
-/************************************/
-/*            ПСЕВДОКЛАССЫ          */
-/************************************/
-
 .header-logo:hover,
 .main-navigation-item a:hover,
 .catalog-submenu a:hover,
@@ -638,10 +604,6 @@ img {
 .footer-site-navigation a:active {
   opacity: 0.3;
 }
-
-/************************************/
-/*              MAIN                */
-/************************************/
 
 .container {
   width: 1160px;
@@ -976,10 +938,6 @@ img {
   margin-bottom: 70px;
 }
 
-/************************************/
-/*             FOOTER               */
-/************************************/
-
 .main-footer {
   margin: 0;
   padding: 0;
@@ -1167,10 +1125,6 @@ img {
 .social-button:active {
   opacity: 0.1;
 }
-
-/************************************/
-/*            PAGE CATALOG          */
-/************************************/
 
 .main-header--catalog {
   min-height: 186px;
@@ -1492,6 +1446,9 @@ img {
 }
 
 .compare-add {
+  border: none;
+  outline: none;
+  background-color: transparent;
   margin-top: 11px;
   font-family: "Open Sans", Arial, sans-serif;
   font-style: normal;
@@ -1500,6 +1457,7 @@ img {
   line-height: 18px;
   letter-spacing: 0.1em;
   opacity: 0.3;
+  cursor: pointer;
 }
 
 .compare-add:hover {
@@ -1594,10 +1552,6 @@ img {
   align-content: start;
   margin-top: 40px;
 }
-
-/****************************/
-/*          ФИЛЬТР          */
-/****************************/
 
 .filter-item {
   margin: 0;
@@ -1728,6 +1682,11 @@ img {
   margin: 0;
 }
 
+.toogle-min-count input[type="number"],
+.toogle-max-count input[type="number"] {
+  -moz-appearance: textfield;
+}
+
 .toogle-min-count input:focus,
 .toogle-max-count input:focus {
   outline: 2px solid var(--basic-half-gray);
@@ -1828,10 +1787,6 @@ img {
 .search-form .button {
   width: 100%;
 }
-
-/************************************/
-/*         МОДАЛЬНЫЕ ОКНА           */
-/************************************/
 
 .modal {
   box-sizing: border-box;
